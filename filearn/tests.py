@@ -76,7 +76,7 @@ class FeatureInteractionLibTestSuite(object):
         fiLib.multiply_pairwise_features()
 
     def test_multiply_pairwise_sklearn_linear_regressor(self):
-        print("\nLinear Regressor Multiplication")
+        print("\nLinear Regressor Pairwise Multiplication")
         n = 100
         x0 = np.array([1 if x == 0 else x for x in np.random.randint(-100, high=100, size=n)])
         x1 = np.array([1 if x == 0 else x for x in np.random.randint(-100, high=100, size=n)])
@@ -94,7 +94,7 @@ class FeatureInteractionLibTestSuite(object):
         fiLib.multiply_pairwise_features()
 
     def test_multiply_sklearn_linear_regressor(self):
-        print("\nLinear Regressor Multiplication")
+        print("\nLinear Regressor Triple Multiplication")
         n = 100
         x0 = np.array([1 if x == 0 else x for x in np.random.randint(-100, high=100, size=n)])
         x1 = np.array([1 if x == 0 else x for x in np.random.randint(-100, high=100, size=n)])
@@ -115,8 +115,6 @@ class FeatureInteractionLibTestSuite(object):
 
 class LossFunction(object):
 
-    def __init__(self):
-        pass
     @staticmethod
     def mse(y_pred, y_test):
         return sum(pow(y_pred - y_test, 2))
